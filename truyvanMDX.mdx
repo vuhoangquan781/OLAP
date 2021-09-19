@@ -1,0 +1,51 @@
+﻿--1) Cho biết tổng doanh thu của công ty?
+select  [Measures].[DOANHTHU] on columns
+from [QLVATLIEU FACT];
+--2) Cho biết doanh thu từng chi nhánh ? 
+select {[Measures].[DOANHTHU]} on columns,
+[DIM CHINHANH].[TENCHINHANH].[TENCHINHANH] on rows
+from [QLVATLIEU FACT];
+--3) Cho biết doanh thu từng sản phẩm ? 
+select {[Measures].[DOANHTHU]} on columns,
+[DIM SANPHAM].[TENSP].[TENSP] on rows
+from [QLVATLIEU FACT];
+--4) Cho biết doanh thu từng chi nhánh theo năm?
+select {[Measures].[DOANHTHU]} on columns,
+crossjoin ([DIM CHINHANH].[TENCHINHANH].[TENCHINHANH],[DIM THOIGIAN].[NAM].[NAM]) on rows
+from [QLVATLIEU FACT];
+--5) Cho biết doanh thu từng tháng trong từng năm?
+select {[Measures].[DOANHTHU]} on columns,
+crossjoin ([DIM THOIGIAN].[THANG].[THANG],[DIM THOIGIAN].[NAM].[NAM]) on rows
+from [QLVATLIEU FACT];
+--6) Cho biết số lượng bán, giá bán, doanh thu của từng chi nhánh sắp xếp giảm dần theo doanh thu?
+select {[Measures].[SOLUONG],[Measures].[GIABAN],[Measures].[DOANHTHU]} on columns,
+ORDER ([DIM CHINHANH].[TENCHINHANH].[TENCHINHANH],[Measures].[DOANHTHU],DESC) on rows
+from [QLVATLIEU FACT];
+--7) Cho biết số lượng đã bán, doanh thu của sản phẩm có tên Gạch sứ?
+select {[Measures].[DOANHTHU]} on columns,
+[DIM SANPHAM].[TENSP].&[Gạch sứ] on rows
+from [QLVATLIEU FACT];
+--8) Cho biết số lượng mỗi sản phẩm bán ra của công ty trong tháng 7 năm 2020
+select {[Measures].[SOLUONG]} on columns,
+crossjoin ([DIM SANPHAM].[TENSP].[TENSP],[DIM THOIGIAN].[THANG].&[7],[DIM THOIGIAN].[NAM].&[2020] ) on rows
+from [QLVATLIEU FACT];
+--9) Cho biết 4 sản phẩm có doanh thu cao nhất?
+select {[Measures].[DOANHTHU]} on columns,
+HEAD(ORDER([DIM SANPHAM].[TENSP].[TENSP],[Measures].[DOANHTHU],DESC),4) on rows
+from [QLVATLIEU FACT];
+--10) Cho biết doanh thu của vùng Miền Bắc trong năm 2020?
+select {[Measures].[DOANHTHU]} on columns,
+crossjoin ([DIM KHUVUC].[TENKV].&[Miền Bắc],[DIM THOIGIAN].[NAM].[NAM]) on rows
+from [QLVATLIEU FACT];
+--11) Cho biết doanh thu của nhà cung cấp TTH?
+select {[Measures].[DOANHTHU]} on columns,
+[DIM NHACUNGCAP].[TENNCC].&[TTH] on rows
+from [QLVATLIEU FACT];
+--12 Cho biết sản phẩm sắt Tonvina có giá bán bao nhiêu trong năm 2020?
+select {[Measures].[GIABAN] } on columns,
+crossjoin ([DIM SANPHAM].[TENSP].&[sắt Tonvina],[DIM THOIGIAN].[NAM].&[2020]) on rows
+from [QLVATLIEU FACT];
+--13 Cho biết sản phẩm Gỗ Cẩm Tường có giá bán bao nhiêu trong năm 2020?
+select {[Measures].[GIABAN] } on columns,
+crossjoin ([DIM SANPHAM].[TENSP].&[Gỗ Cẩm Tường],[DIM THOIGIAN].[NAM].&[2020]) on rows
+from [QLVATLIEU FACT];

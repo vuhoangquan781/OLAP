@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <OLAPDataSource ComponentName="dashboardOlapDataSource1" Name="OLAP Data Source 1" ConnectionName="LAPTOP-QDB8TS3B\VUHOANGQUAN07_SSAS_QLVATLIEU FACT" ConnectionString="provider=msolap;data source=LAPTOP-QDB8TS3B\VUHOANGQUAN07;initial catalog=SSAS;timeout=1200;Cube Name=QLVATLIEU FACT;" />
+  </DataSources>
+  <Items>
+    <Pivot ComponentName="pivotDashboardItem2" Name="Doanh thu của từng sản phẩm" DataSource="dashboardOlapDataSource1">
+      <DataItems>
+        <Dimension DataMember="[DIM SANPHAM].[TENSP].[TENSP]" DefaultId="DataItem2" />
+        <Measure DataMember="[Measures].[DOANHTHU]" DefaultId="DataItem0" />
+        <Measure DataMember="[Measures].[GIABAN]" DefaultId="DataItem1" />
+        <Dimension DataMember="[DIM THOIGIAN].[NAM].[NAM]" DefaultId="DataItem3" />
+        <Dimension DataMember="[DIM SANPHAM].[MASP].[MASP]" DefaultId="DataItem4" />
+        <Dimension DataMember="[DIM CHINHANH].[TENCHINHANH].[TENCHINHANH]" DefaultId="DataItem5" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem3" />
+        <Column DefaultId="DataItem5" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem2" />
+        <Row DefaultId="DataItem4" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem DashboardItem="pivotDashboardItem2" Weight="100" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

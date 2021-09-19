@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS</Database>
+    <Server>LAPTOP-QDB8TS3B\VUHOANGQUAN07</Server>
+    <ConnectionString>Data Source=LAPTOP-QDB8TS3B\VUHOANGQUAN07;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>ePpG1X2PtLuY4rOWC4EUKNmBkXc=4/20/2021 5:01:17 AM4/20/2021 5:01:17 AM</TimeStamp>
+        <ID>
+          <String>QLVATLIEU FACT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>ywVDLajX4UuYWsWPNz2XIrPdSPw=4/20/2021 5:02:13 AM4/20/2021 5:02:12 AM</TimeStamp>
+        <ID>
+          <String>QLVATLIEU FACT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>VRKE0Kw6CINvCtlDVIsDEIe0MVA=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM KHACHHANG</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>/6Svx5T0Y78AgGnmX8RMo5r0kPI=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM THOIGIAN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>K+CWUa5VbtQb4gNKDdeIJlrl8C8=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM SANPHAM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>X7DVd8CkFq6lq50rbBUMwdif/8A=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM NHANVIEN</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>a01AsidbrVU5BQi8s7sR9LNRLBA=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM NHACUNGCAP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rdPi8D9jyBKltoZwKDbcEJdfqBg=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM CHINHANH</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>hSHavR79blQJnaZF8GQjHS6JT70=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM KHUVUC</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Sa413s6rNLfkGrlZRIZCjCt6YS8=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>DIM LOAISANPHAM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>w7XIupgy5d7azUu+LkSfT3WPDdY=4/20/2021 5:06:58 AM4/20/2021 5:03:49 AM+pDkYNMxHawpTuOF09VFD2prUqA=4/20/2021 5:03:49 AM4/20/2021 5:03:49 AM</TimeStamp>
+        <ID>
+          <String>QLVATLIEU FACT</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>L3RgD5K6+2adEX9N4H/9Eh9aS/o=4/20/2021 4:59:24 AM4/20/2021 4:59:24 AM</TimeStamp>
+      <ID>
+        <String>SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-04-19T22:07:36.873333Z</LastDeployed>
+</DeploymentSnapshot>

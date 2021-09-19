@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <OLAPDataSource ComponentName="dashboardOlapDataSource1" Name="OLAP Data Source 1" ConnectionName="LAPTOP-QDB8TS3B\VUHOANGQUAN07_SSAS_QLVATLIEU FACT" ConnectionString="provider=msolap;data source=LAPTOP-QDB8TS3B\VUHOANGQUAN07;initial catalog=SSAS;timeout=1200;Cube Name=QLVATLIEU FACT;" />
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Biểu đồ tròn doanh thu theo tên sản phẩm" DataSource="dashboardOlapDataSource1" ShowPieCaptions="false">
+      <DataItems>
+        <Dimension DataMember="[DIM SANPHAM].[TENSP].[TENSP]" SortOrder="Descending" DefaultId="DataItem1" />
+        <Measure DataMember="[Measures].[DOANHTHU]" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem2" />
+      </Values>
+    </Pie>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pieDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
